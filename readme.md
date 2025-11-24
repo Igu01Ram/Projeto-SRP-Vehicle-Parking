@@ -8,6 +8,8 @@
 ## Estruturação das pastas 
 ```
 SOLID P2 2.0 REFAT
+├── images/
+│   └──imagens_do_projeto
 ├── public/
 │   └── index.php
 ├── src/
