@@ -1,5 +1,7 @@
 ## Projeto final de aplicação dos conceitos vistos em sala, foi desenvolvido seguindo as recomendações padrão do PHP, utilizando os princípios SOLID, código limpo e outras recomendações também (DRY e KISS). Aqui, encontraremos a versão PHP 8.3.25, gerenciador composer e persistência de dados em SQLite.
 
+<img src="images/home.png">
+
 ## Integrantes        |   RA 
 - Igor Ramos          | 1992632
 - Guilherme Vicente   | 1992017
@@ -53,23 +55,24 @@ SRP PROJECT4
 - Infraestrutura: Implementação de Repositórios usando SQLite e classe de conexão com o Banco de Dados.
 - Sistema de Preços: Regras de preço separadas para cada tipo de veículo.
 
-- <img src="images/relatorio.png">
+<img src="images/relatorio.png">
 
 ## Como rodar o projeto
 
 - No terminal, rode o comando composer install.
 - Após isso, escreva também php -S localhost:8000 (porta padrão) -t public.
-- <img src="images/comando.png">
+<img src="images/comando.png">
 
 - Abra o navegador e coloque na url http://localhost:8000/public -> pasta raíz onde o arquivo index.php é carregado.
-- <img src="images/caminho.png">
+<img src="images/caminho.png">
 
 - Quando acessar, inserir os dados conforme os formulários pedem (placa do veículo e tipo de veículo) e registrar entrada/saída.  
 
 ##  Casos de uso
 
-1- Cadastrar uma placa de veíuclo já préviamente listada, mensagem de erro retornada informando que o veículo já está estacionado
+1- Cadastrar uma placa de veíuclo já préviamente listada, mensagem de erro retornada informando que o veículo já está estacionado.
 <img src="images/caso1.png">
+
 
 2- Pesquisar uma placa de veículo que não foi listada ainda, mensagem de erro retornada informando que não existe esse veículo estacionado
 <img src="images/caso2.png">
