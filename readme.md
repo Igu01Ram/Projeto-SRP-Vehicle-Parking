@@ -1,6 +1,6 @@
 ## Projeto final de aplicação dos conceitos vistos em sala, foi desenvolvido seguindo as recomendações padrão do PHP, utilizando os princípios SOLID, código limpo e outras recomendações também (DRY e KISS). Aqui, encontraremos a versão PHP 8.3.25, gerenciador composer e persistência de dados em SQLite.
 
-![Tela Inicial do Projeto](images/home.png)
+![Tela Inicial do Projeto](../images/home.png)
 
 ## Integrantes        |   RA 
 - Igor Ramos          | 1992632
