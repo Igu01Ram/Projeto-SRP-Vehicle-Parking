@@ -1,6 +1,10 @@
 ## Projeto final de aplicação dos conceitos vistos em sala, foi desenvolvido seguindo as recomendações padrão do PHP, utilizando os princípios SOLID, código limpo e outras recomendações também (DRY e KISS). Aqui, encontraremos a versão PHP 8.3.25, gerenciador composer e persistência de dados em SQLite.
 
+<<<<<<< HEAD
 <img src="images/home.png">
+=======
+![Tela Inicial do Projeto](../images/home.png)
+>>>>>>> 3b2645c71b39fe0d0eba2191bc168ceec0dcf175
 
 ## Integrantes        |   RA 
 - Igor Ramos          | 1992632
@@ -74,4 +78,8 @@ SRP PROJECT4
 <img src="images/caso1.png">
 
 2- Pesquisar uma placa de veículo que não foi listada ainda, mensagem de erro retornada informando que não existe esse veículo estacionado
+<<<<<<< HEAD
 <img src="images/caso2.png">
+=======
+<img src="https://github.com/Igu01Ram/Projeto-SRP-Vehicle-Parking/blob/main/images/caso2.png">
+>>>>>>> 3b2645c71b39fe0d0eba2191bc168ceec0dcf175
