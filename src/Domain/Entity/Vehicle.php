@@ -21,9 +21,4 @@ abstract class Vehicle
     {
         return $this->type;
     }
-
-    abstract public function showInfo(): string;
 }
-
-
-

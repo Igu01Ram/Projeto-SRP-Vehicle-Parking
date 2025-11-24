@@ -7,9 +7,4 @@ class Motorcycle extends Vehicle
     {
         parent::__construct($plate, 'motorcycle');
     }
-
-    public function showInfo(): string
-    {
-        return "Motorbike - Plate: {$this->plate}";
-    }
 }
