@@ -84,6 +84,7 @@ $showReport = isset($_GET['r']);
         .entryData input[type="text"], .exitData input[type="text"] {
             width: 180px;
         }
+
         .entryData select {
             width: 150px;
         }
@@ -102,7 +103,7 @@ $showReport = isset($_GET['r']);
         }
 
         a {
-            color: #0066cc;
+            color: #291fbb96;
             font-weight: bold;
             text-decoration: none;
         }
@@ -143,6 +144,11 @@ $showReport = isset($_GET['r']);
 
         .report-data tr:nth-child(even) {
             background-color: #f9f9f9;
+        }
+
+        h1, h3 {
+            font-family: serif;
+            color: #291fbb96;
         }
 </style>
 
