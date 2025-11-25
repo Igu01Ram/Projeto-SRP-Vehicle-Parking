@@ -15,7 +15,8 @@ class ParkingService
     private ParkingRepository $parkingRepo;
     private VehicleRepository $vehicleRepo;
 
-    public function __construct(VehicleRepository $vehicleRepo, ParkingRepository $parkingRepo){
+    public function __construct(VehicleRepository $vehicleRepo, ParkingRepository $parkingRepo) {
+
         $this->vehicleRepo = $vehicleRepo;
         $this->parkingRepo = $parkingRepo;          
     }

@@ -23,7 +23,7 @@ class SQLiteParkingRepository implements ParkingRepository
                 entry TEXT NOT NULL,
                 exit TEXT,
                 value REAL,
-                FOREIGN KEY(plate) REFERENCES vehicles(placa)
+                FOREIGN KEY(plate) REFERENCES vehicles(plate)
             )
         ");
     }

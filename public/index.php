@@ -37,164 +37,149 @@ $showReport = isset($_GET['r']);
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Smart Parking System</title>
+    <title>Smart Park Project</title>
     <style> 
+        
         body {
-            background: linear-gradient(to right, #7694e6ff, #ffffffff);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(to left, #506dccff, #c3dafe); 
+            font-family: serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; 
+            min-height: 100vh;
         }
 
-        .container {
-            width: 100%;
-            max-width: 900px;
-        }
-
-        .entryData, .exitData {
+        .parking-card, .report-data {
             background: white;
-            padding: 25px;
-            margin: 20px auto;
+            padding: 40px;
             width: 100%;
-            max-width: 700px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 650px; 
+            border-radius: 20px; 
             text-align: left;
         }
 
-        .entryData form, .exitData form {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        h1, h3 {
+            font-family: Serif;
+            color: #483d8b; 
+
         }
         
-        input, select {
-            padding: 8px;
-            width: auto;
+        .input-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px; 
+        }
+        
+        input[type="text"], select {
+            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-left: 5px;
+            border-radius: 8px; 
+            flex-grow: 1; 
+            max-width: 200px;
+            transition: border-color 0.3s;
         }
 
-        .entryData input[type="text"], .exitData input[type="text"] {
-            width: 180px;
-        }
-
-        .entryData select {
-            width: 150px;
-        }
-
-        button {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 6px;
-            background: #4a6cf7;
+        button.main-button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #4a6cf7; 
             color: white;
+            font-weight: bold;
             cursor: pointer;
         }
 
-        button:hover {
+        button.main-button:hover {
             background: #3a54c9;
         }
 
-        a {
-            color: #291fbb96;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .report-btn {
+        .report-link {
             display: block;
             margin-top: 30px;
             text-align: center;
+            color: #483d8b;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
         }
         
         .report-data {
-            background: white;
-            padding: 25px;
-            margin: 20px auto;
-            width: 100%;
-            max-width: 700px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
         }
-
+        
         .report-data table {
             width: 100%;
-            border-collapse: collapse;
             margin-top: 15px;
+            border: 1px solid #e0e7ff;
+            border-radius: 8px;
         }
 
         .report-data th, .report-data td {
-            border: 1px solid #ddd;
-            padding: 10px;
+            border: 1px solid #e0e7ff;
+            padding: 12px;
             text-align: center;
         }
-
-        .report-data th {
-            background-color: #f2f2f2;
-            color: #333;
-        }
-
-        .report-data tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        h1, h3 {
-            font-family: serif;
-            color: #291fbb96;
-        }
-</style>
+    </style>
 
 </head>
 <body>
     <h1>Smart Parking</h1>
     
     <?php if($msg): ?>
-        <p><strong><?= $msg ?></strong></p>
+        <p class="message-box"><strong><?= $msg ?></strong></p>
     <?php endif; ?>
 
     <?php if(!$showReport): ?>
-        <div class= "entryData">
-            <h3>Entry</h3>
-            <form method="post">
-                Plate: <input type="text" name="plate" required>
-                Type: 
-                <select name="type" required>
-                    <option></option>
-                    <option value="car">Car</option>
-                    <option value="motorcycle">Motorcycle</option>
-                    <option value="truck">Truck</option>
-                </select><br><br>
-                <button name="btn_entry">Register Entry</button>
-            </form>
-        </div>
+        <div class="parking-card"> 
+            
+            <div class="form-section entry-section">
+                <h3>Entry</h3>
+                <form method="post">
+                    <div class="input-row plate-row"> 
+                        <label for="plate-entry">Plate:</label>
+                        <input type="text" id="plate-entry" name="plate" required>
+                    </div>
+                    <div class="input-row type-row"> 
+                        <label for="type-entry">Type:</label>
+                        <select id="type-entry" name="type" required>
+                            <option value=""></option>
+                            <option value="car">Car</option>
+                            <option value="motorcycle">Motorcycle</option>
+                            <option value="truck">Truck</option>
+                        </select>
+                        <button name="btn_entry" class="main-button">Register Entry</button>
+                    </div>
+                </form>
+            </div>
 
-        <div class = "exitData">
-            <h3>Exit</h3>
-            <form method="post">
-                Plate: <input type="text" name="plate" required><br><br>
-                <button name="btn_exit">Register exit</button>
-            </form>
+            <div class="form-section exit-section">
+                <h3>Exit</h3>
+                <form method="post">
+                    <div class="input-row exit-row"> 
+                        <label for="plate-exit">Plate:</label>
+                        <input type="text" id="plate-exit" name="plate" required>
+                        <button name="btn_exit" class="main-button">Register exit</button>
+                    </div>
+                </form>
+            </div>
         </div>
         
-        <a href="?r=1">Show report</a>
+        <a href="?r=1" class="report-link">Show report</a>
 
     <?php else: ?>
-            <div class="report-data">
-                <h3>Report</h3>
-                <table border="1">
+        <div class="report-data">
+            <h3>Report</h3>
+            <table border="0">
+                <thead>
                     <tr>
                         <th>Type</th>
                         <th>Quantity</th>
                         <th>Total</th>
                     </tr>
+                </thead>
+                <tbody>
                     <?php foreach($service->report() as $type => $data): ?>
                     <tr>
                         <td><?= ucfirst($type) ?></td>
@@ -202,11 +187,12 @@ $showReport = isset($_GET['r']);
                         <td>R$ <?= number_format($data['billing'], 2, ',', '.') ?></td>
                     </tr>
                     <?php endforeach; ?>
-                </table>
-                <br>
-                <a href="?">Back</a>
-            </div>
-        <?php endif; ?>
+                </tbody>
+            </table>
+            <br>
+            <a href="?">Back</a>
+        </div>
+    <?php endif; ?>
 
 </body>
 </html>
